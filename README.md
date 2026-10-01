@@ -1,4 +1,4 @@
-# IBM Bob CI Intelligence Agent
+# CI Intelligence Agent
 
 > **Team 4Play — IBM Bob 2.0 Hackathon**
 
