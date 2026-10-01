@@ -1,0 +1,53 @@
+{
+  "ref": "feat-auth",
+  "total_coverage_pct": 68.0,
+  "total": 68,
+  "files": [
+    {
+      "path": "src/auth/token.py",
+      "coverage_pct": 82.5,
+      "uncovered_lines": [45, 46, 47]
+    },
+    {
+      "path": "src/auth/middleware.py",
+      "coverage_pct": 55.0,
+      "uncovered_lines": [12, 13, 28, 29, 30, 31, 55, 56, 57, 58]
+    },
+    {
+      "path": "src/auth/session.py",
+      "coverage_pct": 60.0,
+      "uncovered_lines": [99, 100, 101, 110, 111]
+    },
+    {
+      "path": "src/utils/validators.py",
+      "coverage_pct": 91.0,
+      "uncovered_lines": [7]
+    },
+    {
+      "path": "src/utils/crypto.py",
+      "coverage_pct": 50.0,
+      "uncovered_lines": [18, 19, 20, 21, 33, 34]
+    },
+    {
+      "path": "tests/test_auth.py",
+      "coverage_pct": 100.0,
+      "uncovered_lines": []
+    },
+    {
+      "path": "python/ci_client.py",
+      "coverage_pct": 68,
+      "uncovered_lines": [45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130]
+    },
+    {
+      "path": "python/release_checks.py",
+      "coverage_pct": 82,
+      "uncovered_lines": [33, 34, 35]
+    },
+    {
+      "path": "python/coverage_reader.py",
+      "coverage_pct": 91,
+      "uncovered_lines": [12, 13]
+    }
+  ],
+  "_note": "Seeded coverage report for feat/auth branch. Total 68.0% is below the 80% threshold — triggers BLOCKER in check_release_readiness. Contains both src/auth/* files (Python coverage layer) and python/* files (MCP layer)."
+}

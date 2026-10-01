@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "ci-intelligence": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-v", "bob_memory:/app/memory",
+        "-v", "bob_reports:/app/reports",
+        "-e", "CI_API_TOKEN",
+        "-e", "GITHUB_REPO",
+        "bob-ci-agent-mcp-server:latest"
+      ],
+      "alwaysAllow": ["recall_failures", "get_coverage_report", "run_pipeline", "check_release_readiness", "store_failure"]
+    }
+  }
+}
