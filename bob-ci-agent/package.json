@@ -12,7 +12,7 @@
     "ci-agent": "node bin/ci-agent.js",
     "demo": "node bin/ci-agent.js demo",
     "seed-db": "node scripts/seed-db.js",
-    "test": "node --test scripts/integration-test.js tests/test_mcp_client.js tests/test_workflows.js"
+    "test": "npm run seed-db && node --test scripts/integration-test.js tests/test_mcp_client.js tests/test_workflows.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.1",

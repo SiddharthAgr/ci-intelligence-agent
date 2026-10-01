@@ -22,16 +22,12 @@ const SEED_PATH   = path.join(REPO_ROOT, 'memory', 'seed.sql');
 async function main() {
   const SQL = await initSqlJs();
 
-  // Load existing DB or create fresh
-  let db;
+  // Ensure clean seed by removing old DB file if present
   if (fs.existsSync(DB_PATH)) {
-    const buf = fs.readFileSync(DB_PATH);
-    db = new SQL.Database(buf);
-    console.log('[seed-db] Loaded existing database:', DB_PATH);
-  } else {
-    db = new SQL.Database();
-    console.log('[seed-db] Creating new database:', DB_PATH);
+    try { fs.unlinkSync(DB_PATH); } catch (err) {}
   }
+  const db = new SQL.Database();
+  console.log('[seed-db] Initialized fresh database:', DB_PATH);
 
   // Apply schema (strip WAL pragma — no-op in WASM)
   const schema = fs.readFileSync(SCHEMA_PATH, 'utf8')
